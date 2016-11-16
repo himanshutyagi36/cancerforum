@@ -1,0 +1,99 @@
+1477456357932	geckodriver	INFO	Listening on 127.0.0.1:53929
+1477456358850	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.BaRtmHYfU41j
+1477456358851	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1477456358866	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38778
+1477456362243	Marionette	INFO	Listening on port 38778
+1477456363804	Marionette	INFO	startBrowser 16a8938c-dba7-40b2-8c79-fc1ec5f02fd3
+1477456396937	geckodriver	INFO	Listening on 127.0.0.1:46346
+1477456397938	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.F8C5uuppSp6d
+1477456397939	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1477456397941	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41932
+1477456398495	Marionette	INFO	Listening on port 41932
+1477456399636	Marionette	INFO	startBrowser 08565bde-c035-4e1a-ae9f-e0625b4780cb
+JavaScript warning: http://www.cancerforums.net/clientscript/jquery/jquery-1.3.min.js?v=423, line 19: unreachable code after return statement
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1477456467138	geckodriver	INFO	Listening on 127.0.0.1:58753
+1477456468140	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.QGDZNDghKBGl
+1477456468142	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1477456468147	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40759
+1477456468711	Marionette	INFO	Listening on port 40759
+1477456469919	Marionette	INFO	startBrowser fc0a3611-4886-42f7-9bf0-0fdcc32daf22
+JavaScript warning: http://www.cancerforums.net/clientscript/jquery/jquery-1.3.min.js?v=423, line 19: unreachable code after return statement
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1477456627898	geckodriver	INFO	Listening on 127.0.0.1:55320
+1477456628898	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.RD48nvtOmajZ
+1477456628899	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1477456628900	geckodriver::marionette	INFO	Connecting to Marionette on localhost:37221
+1477456629411	Marionette	INFO	Listening on port 37221
+1477456630631	Marionette	INFO	startBrowser 86d9fe2f-b71a-408f-9e8c-d3dd81137f19
+JavaScript warning: http://www.cancerforums.net/clientscript/jquery/jquery-1.3.min.js?v=423, line 19: unreachable code after return statement
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+
+(firefox:6573): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6573): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6573): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6573): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6573): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6573): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6573): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+1477457059774	geckodriver	INFO	Listening on 127.0.0.1:49992
+1477457060774	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.Truv68p1UogN
+1477457060774	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1477457060777	geckodriver::marionette	INFO	Connecting to Marionette on localhost:37193
+1477457061368	Marionette	INFO	Listening on port 37193
+1477457062569	Marionette	INFO	startBrowser c9f3764c-bdbd-44ee-b4ce-1d9302133f88
+JavaScript warning: http://www.cancerforums.net/clientscript/jquery/jquery-1.3.min.js?v=423, line 19: unreachable code after return statement
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 7122] ###!!! ABORT: Aborting on channel error.: file /build/firefox-h19o_O/firefox-49.0+build4/ipc/glue/MessageChannel.cpp, line 2052
+[Child 7122] ###!!! ABORT: Aborting on channel error.: file /build/firefox-h19o_O/firefox-49.0+build4/ipc/glue/MessageChannel.cpp, line 2052
+1477461521899	geckodriver	INFO	Listening on 127.0.0.1:43636
+1477461522898	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.bdG5vEZ0tg9o
+1477461522899	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1477461522901	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38373
+1477461523485	Marionette	INFO	Listening on port 38373
+1477461524745	Marionette	INFO	startBrowser a4d8c746-6f50-448e-99e6-cdba510f6e4e
+JavaScript warning: http://www.cancerforums.net/clientscript/jquery/jquery-1.3.min.js?v=423, line 19: unreachable code after return statement
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 10420] ###!!! ABORT: Aborting on channel error.: file /build/firefox-h19o_O/firefox-49.0+build4/ipc/glue/MessageChannel.cpp, line 2052
+[Child 10420] ###!!! ABORT: Aborting on channel error.: file /build/firefox-h19o_O/firefox-49.0+build4/ipc/glue/MessageChannel.cpp, line 2052
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFA0005,name=PTexture::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFA0005,name=PTexture::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x400003,name=PCompositable::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x400003,name=PCompositable::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFA0005,name=PTexture::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFA0005,name=PTexture::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x400003,name=PCompositable::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFA0005,name=PTexture::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFA0005,name=PTexture::Msg_Destroy) Channel error: cannot send/recv
+
+1477462081070	geckodriver	INFO	Listening on 127.0.0.1:51983
+1477462082067	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.76e31xg50bXP
+1477462082068	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1477462082071	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35175
+1477462082815	Marionette	INFO	Listening on port 35175
+1477462084074	Marionette	INFO	startBrowser 1f38529d-3fe2-4634-84a2-37d644568c6a
+JavaScript warning: http://www.cancerforums.net/clientscript/jquery/jquery-1.3.min.js?v=423, line 19: unreachable code after return statement
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
