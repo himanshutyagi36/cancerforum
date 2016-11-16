@@ -47,11 +47,19 @@ class PostSpider(scrapy.Spider):
                 self.browser.get(link)
                 print (link)
                 time.sleep(5)
-                temp = self.browser.find_element_by_xpath("//div[@class='threadpagenav']").text.encode("utf-8")
-        		temp = temp.split("\n")
-        		temp1 = temp[0].split(" ")
-        		l = len(temp1)
-        		counter = int(temp1[l-1])
+                navigation_flag = 0
+                try:
+                    temp = self.browser.find_element_by_xpath("//div[@class='pagination_top']").text.encode("utf-8")
+                    temp = temp.split("\n")
+                    temp1 = temp[0].split(" ")
+                    l = len(temp1)
+                    counter = int(temp1[l-1])
+                    nextpage = self.browser.find_element_by_xpath("//a[@rel='next']").get_attribute('href')
+                    navigation_flag = 1
+                except NoSuchElementException:
+                    counter = 1
+                    pass
+                # print "******************"+str(counter)+"*****************"
                 for j in range(0,counter):
                     posts_list = self.browser.find_elements_by_xpath('//div[@class="postdetails"]')
                     dateNtime_list = self.browser.find_elements_by_xpath("//span[@class='postdate old']")
@@ -129,8 +137,10 @@ class PostSpider(scrapy.Spider):
                         print "---------Exception in inner for loop--------"
                         continue
                     ## Navigate to the other pages containing threads lists.
-        			next = self.browser.find_element_by_xpath("//a[@rel='next']").get_attribute('href')
-        			self.browser.get(next)
+                    if navigation_flag == 1:
+                        self.browser.get(nextpage)
+                    else:
+                        continue
             except NoSuchElementException:
                 print "---------Element not found-----------"
                 continue
