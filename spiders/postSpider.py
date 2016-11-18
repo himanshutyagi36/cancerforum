@@ -41,7 +41,10 @@ class PostSpider(scrapy.Spider):
 
     def parse(self,response):
         item = PostItem()
+        loop_counter = 0
         for temp in self.cursor.fetchall():
+            loop_counter+=1
+            print "************"+str(loop_counter)+"*********************"
             try:
                 link = temp[0]
                 self.browser.get(link)
@@ -54,21 +57,30 @@ class PostSpider(scrapy.Spider):
                     temp1 = temp[0].split(" ")
                     l = len(temp1)
                     counter = int(temp1[l-1])
-                    nextpage = self.browser.find_element_by_xpath("//a[@rel='next']").get_attribute('href')
                     navigation_flag = 1
                 except NoSuchElementException:
+                    navigation_flag=0
                     counter = 1
                     pass
                 # print "******************"+str(counter)+"*****************"
                 for j in range(0,counter):
+                    dateNtime_list_flag = 0
                     posts_list = self.browser.find_elements_by_xpath('//div[@class="postdetails"]')
-                    dateNtime_list = self.browser.find_elements_by_xpath("//span[@class='postdate old']")
+                    try:
+                        dateNtime_list = self.browser.find_elements_by_xpath("//span[@class='postdate old']")
+                    except NoSuchElementException:
+                        dateNtime_list_flag=1
+                        pass
                     try:
                         for i in range(0,len(posts_list)):
-                            tempList = dateNtime_list[i].text.encode("utf-8")
-                            tempList = tempList.split(',')
-                            postDate = tempList[0]
-                            postTime = tempList[1]
+                            if not dateNtime_list_flag:
+                                tempList = dateNtime_list[i].text.encode("utf-8")
+                                tempList = tempList.split(',')
+                                postDate = tempList[0]
+                                postTime = tempList[1]
+                            else:
+                                postTime = "Not Found"
+                                postDate = "Not Found"
                             # content_list = posts_list[i].find_elements_by_xpath('.//div[@class="content"]')
                             # post_content = content_list[0].text.encode("utf-8")
                             post_content = posts_list[i].find_elements_by_xpath('.//div[@class="postbody"]')[0].find_element_by_xpath('.//div[@class="content"]').text.encode("utf-8")
@@ -80,7 +92,7 @@ class PostSpider(scrapy.Spider):
                                 print "------------Inside Signature Content Exception--------------"
                                 signature_content = ""
                                 pass
-                            print "------------outside signature content exception-----------"
+
                             username = posts_list[i].find_element_by_xpath(".//a[starts-with(@class, 'username')]").text.encode("utf-8")
                             userlink = posts_list[i].find_element_by_xpath(".//a[starts-with(@class, 'username')]").get_attribute('href').encode('utf-8')
                             try:
@@ -91,13 +103,8 @@ class PostSpider(scrapy.Spider):
                                 pass
                             userrank = posts_list[i].find_element_by_xpath(".//span[@class='rank']").text.encode("utf-8")
                             user_joindate = posts_list[i].find_elements_by_xpath('.//dd')[0].text.encode("utf-8")
-                            # user_location = posts_list[i].find_elements_by_xpath('.//dd')[1].text.encode("utf-8")
-                            # try:
-                            #     user_NumberOfPosts = posts_list[i].find_elements_by_xpath('.//dd')[2].text.encode("utf-8")
-                            # except NoSuchElementException:
-                            #     user_NumberOfPosts=0
-                            #     pass
-                            temp = posts_list[0].find_element_by_xpath(".//dl[@class='userinfo_extra']").text.encode("utf-8")
+
+                            temp = posts_list[i].find_element_by_xpath(".//dl[@class='userinfo_extra']").text.encode("utf-8")
                             temp = temp.split("\n")
                             if temp[0]=='Join Date':
                                 user_joindate = temp[1]
@@ -110,15 +117,15 @@ class PostSpider(scrapy.Spider):
                             else:
                                 user_location = temp[3]
                                 user_NumberOfPosts = temp[5]
-                            print postDate
-                            print postTime
-                            print username
-                            print userlink
-                            print usertitle
-                            print userrank
-                            print user_joindate
-                            print user_location
-                            print user_NumberOfPosts
+                            # print postDate
+                            # print postTime
+                            # print username
+                            # print userlink
+                            # print usertitle
+                            # print userrank
+                            # print user_joindate
+                            # print user_location
+                            # print user_NumberOfPosts
 
                             item['postDate'] = postDate
                             item['postTime'] = postTime
@@ -138,9 +145,13 @@ class PostSpider(scrapy.Spider):
                         continue
                     ## Navigate to the other pages containing threads lists.
                     if navigation_flag == 1:
-                        self.browser.get(nextpage)
-                    else:
-                        continue
+                        try:
+                            nextpage = self.browser.find_element_by_xpath("//a[@rel='next']").get_attribute('href')
+                            self.browser.get(nextpage)
+                        except NoSuchElementException:
+                            print "Inside navigation Exception"
+                            pass
+
             except NoSuchElementException:
                 print "---------Element not found-----------"
                 continue

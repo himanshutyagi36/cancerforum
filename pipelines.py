@@ -32,7 +32,7 @@ class CancerforumPipeline(object):
 					pass
         elif (spider.name == "post_spider"):
 			try:
-				self.cursor.execute("INSERT INTO `posts` (`postDate`, `postTime`, `post_content`, `signature_content`, `username`, `userlink`,"
+				self.cursor.execute("REPLACE INTO `posts` (`postDate`, `postTime`, `post_content`, `signature_content`, `username`, `userlink`,"
 					" `usertitle`, `userrank`, `user_joindate`, `user_location`, `user_NumberOfPosts`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
 				(item['postDate'], item['postTime'], item['post_content'], item['signature_content'], item['username'], item['userlink'], item['usertitle'],
 				item['userrank'], item['user_joindate'], item['user_location'], item['user_NumberOfPosts']))
